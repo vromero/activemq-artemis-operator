@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: activemq-artemis-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: activemq-artemis-operator
+  template:
+    metadata:
+      labels:
+        name: activemq-artemis-operator
+    spec:
+      containers:
+        - name: activemq-artemis-operator
+          image: vromero/activemq-artemis-operator
+          command:
+          - activemq-artemis-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace

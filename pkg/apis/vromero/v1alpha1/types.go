@@ -22,7 +22,9 @@ type ArtemisCluster struct {
 }
 
 type ArtemisClusterSpec struct {
-	// Fill me
+	Version string
+	Variant string
+	Size int32
 }
 type ArtemisClusterStatus struct {
 	// Fill me

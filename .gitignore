@@ -1,3 +1,5 @@
+.idea
+Gopkg.lock
 
 # Temporary Build Files
 tmp/_output

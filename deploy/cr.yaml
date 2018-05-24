@@ -1,4 +1,13 @@
 apiVersion: "vromero.github.io/v1alpha1"
 kind: "ArtemisCluster"
+
 metadata:
-  name: "example"
+  name: "my-example-artemis-cluster"
+
+spec:
+  version: "2.5.0"
+  variant: "alpine"
+  size: 3
+
+
+
